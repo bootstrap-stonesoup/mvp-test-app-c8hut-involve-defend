@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rhtap-demo-component-ogim
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/rhtap-demo-dev-qcmk-tenant/mvp-test-app/rhtap-demo-component-ogim@sha256:d83ba655680bd3c5a6ae7b3ae93fdf1ed54a08a49f753666ab55d94de363f366
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
